@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="logo/logo.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="user1.css">
+  <link rel="stylesheet" href="stages-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <title>Stages - Elisa Maouze</title>
+</head>
+
+<body>
+  <!-- Particules d'arrière-plan -->
+  <div id="particles-background"></div>
+  
+  <!-- Curseur personnalisé -->
+  <div class="custom-cursor"></div>
+  <div class="custom-cursor-dot"></div>
+
+  <!-- Navigation améliorée -->
+  <nav class="navbar-enhanced">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="index.html" class="brand-link">
+          <div class="logo-container">
+            <img src="logo/logo.png" alt="Logo" class="nav-logo">
+            <div class="brand-text">
+              <span class="brand-name">Elisa Maouze</span>
+              <span class="brand-subtitle">Informaticienne</span>
+            </div>
+          </div>
+        </a>
+      </div>
+      
+      <div class="nav-toggle" id="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link" data-page="index">
+              <span class="nav-text">Accueil</span>
+              <span class="nav-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="projets.html" class="nav-link" data-page="projets">
+              <span class="nav-text">Projets</span>
+              <span class="nav-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="stages.html" class="nav-link active" data-page="stages">
+              <span class="nav-text">Stages</span>
+              <span class="nav-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="veille.html" class="nav-link" data-page="veille">
+              <span class="nav-text">Veille</span>
+              <span class="nav-indicator"></span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" data-page="contact">
+              <span class="nav-text">Contact</span>
+              <span class="nav-indicator"></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="stages-hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-text">Expérience Professionnelle</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Mes Stages</span>
+        <span class="title-line">en</span>
+        <span class="title-line highlight">Entreprise</span>
+      </h1>
+      <p class="hero-subtitle">
+        Découvrez mon parcours professionnel et les compétences acquises 
+        lors de mes expériences en entreprise
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">2</span>
+          <span class="stat-label">Stages</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">12</span>
+          <span class="stat-label">Semaines</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Réussite</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Formes géométriques -->
+    <div class="geometric-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </section>
+
+  <!-- Section Stages -->
+  <section class="stages-timeline">
+    <div class="container">
+      <!-- Stage 1 - Saint Jean Industries -->
+      <div class="stage-card" id="saint-jean">
+        <div class="stage-number">01</div>
+        <div class="stage-content">
+          <div class="stage-header">
+            <div class="stage-meta">
+              <span class="stage-type">Stage Technique</span>
+              <span class="stage-duration">6 semaines</span>
+            </div>
+            <h3 class="stage-title">Saint Jean Industries</h3>
+            <div class="stage-location">
+              <div class="location-icon">📍</div>
+              <div class="location-details">
+                <span class="location-address">180 Rue des Frères Lumière, ZAC Les Gouchoux</span>
+                <span class="location-city">69220 Belleville-en-Beaujolais, France</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-description">
+            <p>
+              J'ai développé une application de gestion sous forme de statistiques pour les responsables 
+              des méthodes. L'application consistait à avoir un suivi sur les différents états des pièces 
+              avec des périodes de date choisies.
+            </p>
+            <p>
+              Notre mission consistait à participer au développement de l'application sous WinDev avec 
+              le langage WLangage qui lui est associé. En mode agile, j'ai eu la charge d'analyser les 
+              spécifications techniques pour concevoir et développer le logiciel.
+            </p>
+          </div>
+
+          <div class="stage-tech">
+            <h4 class="tech-title">Technologies utilisées</h4>
+            <div class="tech-stack">
+              <span class="tech-tag windev">WinDev</span>
+              <span class="tech-tag wlang">WLangage</span>
+              <span class="tech-tag agile">Méthode Agile</span>
+            </div>
+          </div>
+
+          <div class="stage-skills">
+            <h4 class="skills-title">Compétences développées</h4>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-icon">🎯</div>
+                <div class="skill-content">
+                  <span class="skill-name">Répondre aux incidents</span>
+                  <span class="skill-desc">Collecter, suivre et orienter des demandes</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🚀</div>
+                <div class="skill-content">
+                  <span class="skill-name">Mode projet</span>
+                  <span class="skill-desc">Analyser les objectifs et modalités d'organisation</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">💼</div>
+                <div class="skill-content">
+                  <span class="skill-name">Service informatique</span>
+                  <span class="skill-desc">Tests, déploiement et accompagnement</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">📈</div>
+                <div class="skill-content">
+                  <span class="skill-name">Développement professionnel</span>
+                  <span class="skill-desc">Évolution de carrière et compétences</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-actions">
+            <a href="compte_rendu/compte rendu semaine 5 et 6 (3).pdf" class="btn-primary">
+              <span>Compte rendu</span>
+              <div class="btn-arrow">📄</div>
+            </a>
+            <button class="btn-secondary" onclick="showMap('map1')">
+              <span>Voir sur la carte</span>
+              <div class="btn-icon">🗺️</div>
+            </button>
+          </div>
+
+          <div class="stage-map" id="map1-container" style="display: none;">
+            <div id="map1" class="map-embed"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stage 2 - ADEA Formation -->
+      <div class="stage-card" id="adea">
+        <div class="stage-number">02</div>
+        <div class="stage-content">
+          <div class="stage-header">
+            <div class="stage-meta">
+              <span class="stage-type">Stage Formation</span>
+              <span class="stage-duration">6 semaines</span>
+            </div>
+            <h3 class="stage-title">ADEA Formation</h3>
+            <div class="stage-location">
+              <div class="location-icon">📍</div>
+              <div class="location-details">
+                <span class="location-address">12 Rue du Peloux</span>
+                <span class="location-city">01000 Bourg-en-Bresse, France</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-description">
+
+            
+            <p>
+              J'ai développé un bot discord en python pour pouvoir faire du monitoring. Le bot consistait à avoir un suivi sur la disponibilité des cibles (comme un site web, un répéteur wifi).
+             
+              J'ai participé à la refont d'un site web sur WordPress avec Elementor selon la demande du reponsable informatique.
+            </p>
+            <p>
+              
+            </p>
+          </div>
+
+          <div class="stage-tech">
+            <h4 class="tech-title">Technologies utilisées</h4>
+            <div class="tech-stack">
+              <span class="tech-tag windev">Python</span>
+              <span class="tech-tag wlang">WordPress</span>
+              <span class="tech-tag agile">Méthode Agile</span>
+            </div>
+          </div>
+
+          <div class="stage-skills">
+            <h4 class="skills-title">Compétences développées</h4>
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-icon">🎯</div>
+                <div class="skill-content">
+                  <span class="skill-name">Répondre aux incidents</span>
+                  <span class="skill-desc">Collecter, suivre et orienter des demandes</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">🚀</div>
+                <div class="skill-content">
+                  <span class="skill-name">Mode projet</span>
+                  <span class="skill-desc">Analyser les objectifs et modalités d'organisation</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">💼</div>
+                <div class="skill-content">
+                  <span class="skill-name">Service informatique</span>
+                  <span class="skill-desc">Tests, déploiement et accompagnement</span>
+                </div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-icon">📈</div>
+                <div class="skill-content">
+                  <span class="skill-name">Développement professionnel</span>
+                  <span class="skill-desc">Évolution de carrière et compétences</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stage-actions">
+            <a href="compte_rendu/compte_rendu_adea_formation.pdf" class="btn-primary">
+              <span>Compte rendu</span>
+              <div class="btn-arrow">📄</div>
+            </a>
+            <button class="btn-secondary" onclick="showMap('map2')">
+              <span>Voir sur la carte</span>
+              <div class="btn-icon">🗺️</div>
+            </button>
+          </div>
+
+          <div class="stage-map" id="map2-container" style="display: none;">
+            <div id="map2" class="map-embed"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Section Contact -->
+    <section id="contact" class="contact-preview">
+      <div class="container">
+          <h3 class="contact-title">Prêt à collaborer ?</h3>
+          <p class="contact-text">Discutons de mes projets et des vôtres</p>
+          
+          <!-- Informations de contact -->
+          <div class="contact-info">
+            
+            <div class="contact-item">
+             
+              <div class="contact-icon">📧</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p><a href="mailto:elisa.maouze@gmail.com" class="contact-link">elisa.maouze@gmail.com</a></p>
+              </div>
+            </div>
+            
+            
+
+          </br>
+            
+            <div class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <h4>LinkedIn</h4>
+                <p><a href="https://www.linkedin.com/in/elisa-maouze-6a4228298/" target="_blank" class="contact-link">Elisa Maouze</a></p>
+              </div>
+            </div>
+
+            </br>
+            
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <h4>Localisation</h4>
+                <p>France</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    let maps = {};
+
+    function showMap(mapId) {
+      const container = document.getElementById(mapId + '-container');
+      const isVisible = container.style.display !== 'none';
+      
+      if (isVisible) {
+        container.style.display = 'none';
+        return;
+      }
+      
+      container.style.display = 'block';
+      
+      if (!maps[mapId]) {
+        setTimeout(() => {
+          const coords = mapId === 'map1' ? [46.108333, 4.750000] : [46.20094, 5.21353];
+          const title = mapId === 'map1' ? 'Saint Jean Industries' : 'ADEA Formation';
+          
+          const map = L.map(mapId).setView(coords, 13);
+          L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+          }).addTo(map);
+          L.marker(coords).addTo(map).bindPopup(title).openPopup();
+          
+          maps[mapId] = map;
+        }, 100);
+      } else {
+        setTimeout(() => maps[mapId].invalidateSize(), 100);
+      }
+    }
+  </script>
+  <script src="user1.js"></script>
+</body>
+</html>
